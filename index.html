@@ -1,49 +1,65 @@
-<!-- Logged-Out (General Visitor) -->
-<div class="card shadow-sm mb-3">
-  <div class="card-header bg-primary text-white">
-    🎓 SOBIE 2025: April 21–23, Florida
-  </div>
-  <div class="card-body">
-    <p>Welcome! Ready to join us?</p>
-    <a href="/register" class="btn btn-success btn-sm mb-2">Register Now</a>
-    <a href="/schedule" class="btn btn-outline-primary btn-sm">See the Schedule</a>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SOBIE Conference Layout</title>
 
-<!-- Logged-In (Attendee) -->
-<div class="card shadow-sm mb-3">
-  <div class="card-header bg-success text-white">
-    Welcome Back, Barry 👋
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- What's New Banner -->
+  <div class="alert alert-info alert-dismissible fade show text-center mb-0" role="alert">
+    <strong>What's New:</strong> Conference registration opens April 15th!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
-  <div class="card-body">
-    <p><strong>Your Status:</strong> Registered ✅</p>
-    <p><strong>Next Step:</strong> Book hotel by April 15</p>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-2 d-none d-md-block sidebar p-3 shadow-sm bg-white">
+        <h4>SOBIE Menu</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+        </ul>
+      </nav>
+
     
-    <div class="d-grid gap-2">
-      <a href="/agenda" class="btn btn-outline-dark btn-sm">📅 View My Agenda</a>
-      <a href="/resources" class="btn btn-outline-info btn-sm">🧾 Conference Materials</a>
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
+        <h1 class="mt-4">Welcome to SOBIE 2025</h1>
+
+        <!-- Global Search Bar -->
+        <form class="d-flex my-4" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search the SOBIE site" aria-label="Search" />
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+
+        <p>This is the main content area for updates, speaker announcements, and other key info for attendees.</p>
+      </main>
     </div>
   </div>
-</div>
 
-<--search bar-->
-<div class="mb-3">
-  <input type="text" class="form-control" id="search-bar" placeholder="Search events, speakers, etc.">
-</div>
-
-<--What's New-->
-  <div class="alert alert-warning text-center mb-0">
-  🆕 Latest Update: Early bird registration ends April 10th! <a href="/register" class="alert-link">Register now</a>
-</div>
-
-<--Sidebar Nav-->
-  <div class="col-md-3">
-  <div class="position-sticky" style="top: 20px;">
-    <div class="list-group">
-      <a href="/schedule" class="list-group-item list-group-item-action">📅 Schedule</a>
-      <a href="/speakers" class="list-group-item list-group-item-action">🎤 Speakers</a>
-      <a href="/register" class="list-group-item list-group-item-action">✍️ Register</a>
-      <a href="/faq" class="list-group-item list-group-item-action">❓ FAQs</a>
+  <!-- User Context Panel -->
+  <div class="user-panel card shadow-sm">
+    <div class="card-body text-center">
+      <img src="assets/user-placeholder.jpg" class="rounded-circle mb-2" alt="User" width="80" height="80" />
+      <h6 class="card-title">Welcome, Alex!</h6>
+      <p class="text-muted small">Role: Attendee</p>
+      <a href="#" class="btn btn-sm btn-outline-primary">My Account</a>
     </div>
   </div>
-</div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
