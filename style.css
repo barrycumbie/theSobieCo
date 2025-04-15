@@ -1,20 +1,86 @@
+/* General Reset and Fonts */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f9fa;
+  margin: 0;
+  padding-top: 56px; 
 }
 
+/* What's New Banner */
+.whats-new {
+  position: relative;
+  z-index: 1030;
+}
+
+/* Sidebar */
 .sidebar {
   min-height: 100vh;
   background-color: #ffffff;
+  border-right: 1px solid #dee2e6;
 }
 
-.main-content {
-  padding: 1.5rem;
+.sidebar h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar .nav-link {
+  font-size: 1rem;
+  color: #333;
+}
+
+.sidebar .nav-link.active {
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+.sidebar .nav-link:hover {
+  text-decoration: underline;
 }
 
 .user-panel {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  width: 250px;
+  margin-top: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+}
+
+.user-panel img {
+  object-fit: cover;
+}
+
+/* Main Content */
+.main-content {
+  padding: 2rem;
+}
+
+/* Search Bar */
+.search-bar {
+  margin-bottom: 2rem;
+}
+
+.search-bar form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+.card {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+    min-height: auto;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
 }
