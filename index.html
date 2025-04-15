@@ -2,20 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SOBIE Conference Layout</title>
-
-  <!-- Bootstrap 5 CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOBIE Conference</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- What's New Banner -->
-  <div class="alert alert-info alert-dismissible fade show text-center mb-0" role="alert">
-    <strong>What's New:</strong> Conference registration opens April 15th!
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <div class="alert alert-info text-center mb-0 whats-new" role="alert">
+    📢 What's New: Registration now open! Early bird deadline April 30.
   </div>
 
   <div class="container-fluid">
@@ -23,44 +18,40 @@
       <!-- Sidebar -->
       <nav class="col-md-2 d-none d-md-block sidebar p-3 shadow-sm bg-white">
         <h4>SOBIE Menu</h4>
-        <ul class="nav flex-column">
+        <ul class="nav flex-column mb-4">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Schedule</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
           <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
         </ul>
+
+        <!-- User Context Panel -->
+        <div class="card user-panel shadow-sm mt-auto">
+          <div class="card-body text-center">
+            <img src="assets/user-placeholder.jpg" class="rounded-circle mb-2" alt="User" width="80" height="80" />
+            <h6 class="card-title mb-0">Welcome, User!</h6>
+            <p class="text-muted small">Role: Attendee</p>
+            <a href="#" class="btn btn-sm btn-outline-primary">My Account</a>
+          </div>
+        </div>
       </nav>
 
-    
-      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
-        <h1 class="mt-4">Welcome to SOBIE 2025</h1>
+      <!-- Main Content -->
+      <main class="col-md-10 main-content">
+        <div class="search-bar">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search SOBIE content..." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
 
-        <!-- Global Search Bar -->
-        <form class="d-flex my-4" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search the SOBIE site" aria-label="Search" />
-          <button class="btn btn-outline-primary" type="submit">Search</button>
-        </form>
-
-        <p>This is the main content area for updates, speaker announcements, and other key info for attendees.</p>
+        <h1>Welcome to the SOBIE Conference</h1>
+        <p>This site helps you navigate updates, register, and participate in the event. Use the menu or search bar to get started!</p>
       </main>
     </div>
   </div>
 
-  <!-- User Context Panel -->
-    <div class="card user-panel shadow-sm">
-    <div class="card-body text-center">
-      <img src="assets/user-placeholder.jpg" class="rounded-circle mb-2" alt="User" width="80" height="80" />
-      <h6 class="card-title mb-0">Welcome, user!</h6>
-      <p class="text-muted small">Role: Attendee</p>
-      <a href="#" class="btn btn-sm btn-outline-primary">My Account</a>
-    </div>
-  </div>
-</nav>
-
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
