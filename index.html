@@ -2,56 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SOBIE Conference</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SOBIE Conference - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- What's New Banner -->
-  <div class="alert alert-info text-center mb-0 whats-new" role="alert">
-    📢 What's New: Registration now open! Early bird deadline April 30.
+  <!-- Banner -->
+  <div class="alert alert-info text-center mb-0">
+    📢 Latest Update: Registration now open for SOBIE 2025 in Florida!
   </div>
 
   <div class="container-fluid">
     <div class="row">
       <!-- Sidebar -->
-      <nav class="col-md-2 d-none d-md-block sidebar p-3 shadow-sm bg-white">
-        <h4>SOBIE Menu</h4>
-        <ul class="nav flex-column mb-4">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Schedule</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+      <nav class="col-md-2 bg-light p-3">
+        <h5>SOBIE 2025</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="account.html">My Account</a></li>
         </ul>
-
-        <!-- User Context Panel -->
-        <div class="card user-panel shadow-sm mt-auto">
-          <div class="card-body text-center">
-            <img src="assets/user-placeholder.jpg" class="rounded-circle mb-2" alt="User" width="80" height="80" />
-            <h6 class="card-title mb-0">Welcome, User!</h6>
-            <p class="text-muted small">Role: Attendee</p>
-            <a href="#" class="btn btn-sm btn-outline-primary">My Account</a>
-          </div>
+        <div class="mt-5 p-2 bg-white border rounded">
+          <strong>Welcome, Alex!</strong><br/>
+          Role: Attendee<br/>
+          <a href="account.html" class="btn btn-sm btn-outline-primary mt-2">Profile</a>
         </div>
       </nav>
 
       <!-- Main Content -->
-      <main class="col-md-10 main-content">
-        <div class="search-bar">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search SOBIE content..." aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
+      <main class="col-md-10 p-4">
+        <h1>Welcome to SOBIE 2025</h1>
+        <p>The Society of Business, Industry, and Economics (SOBIE) hosts an annual conference promoting scholarly research and collaboration. Join us in Florida for the 2025 conference!</p>
 
-        <h1>Welcome to the SOBIE Conference</h1>
-        <p>This site helps you navigate updates, register, and participate in the event. Use the menu or search bar to get started!</p>
+        <h4>Important Highlights</h4>
+        <ul>
+          <li>📍 Location: Sandestin, Florida</li>
+          <li>📅 Dates: April 16–18, 2025</li>
+          <li>📝 Registration: Now Open</li>
+        </ul>
       </main>
     </div>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
