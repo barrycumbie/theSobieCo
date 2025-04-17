@@ -1,9 +1,39 @@
-<h1>My Account</h1>
-<p>Welcome back, Alex!</p>
-<ul>
-  <li>Email: alex@example.com</li>
-  <li>Registered: Yes</li>
-  <li>Role: Attendee</li>
-</ul>
-<p><a href="register.html" class="btn btn-primary">Edit Registration</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Account</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Your SOBIE Account</h1>
+    <div class="banner">📢 Update your profile before May 1!</div>
+    <input type="text" placeholder="Search SOBIE..." class="search-bar" />
+  </header>
 
+  <main class="layout">
+    <nav class="sidebar">
+      <ul>
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="register.html">Register</a></li>
+        <li><a class="nav-link" href="schedule.html">Schedule</a></li>
+        <li><a class="nav-link" href="account.html">Account</a></li>
+      </ul>
+    </nav>
+
+    <section class="content">
+      <h2>Manage Your Account</h2>
+      <p>Update your info, preferences, and registration status.</p>
+    </section>
+
+    <aside class="user-panel">
+      <h3>User: <span class="user-name">...</span></h3>
+      <p>Status: Logged In</p>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
