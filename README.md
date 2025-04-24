@@ -20,7 +20,7 @@ This sub-issue enhances the Sobie Co. staging site by improving the user layout 
 | 🤠 My Fork          | https://github.com/LMoats11/theSobieCo |
 | 🌐 VsCode                                                    |
 | 🐝 Sub-Issue        | https://github.com/barrycumbie/theSobieCo/issues/XX |
-| 🤠 Feature Branch   | `user-context-enhancement` |
+| 🤠 Feature Branch   | `u` |
 | 📁 Folder/Path      | `/index.html`, `/styles/style.css`, `/scripts/script.js` |
 
 ---
@@ -29,7 +29,7 @@ This sub-issue enhances the Sobie Co. staging site by improving the user layout 
 
 | 🔴 BEFORE | 🟩 AFTER |
 |----------|---------|
-| ![before](screenshots/before.png) | ![after](screenshots/after.png) |
+| ![before](screenshots/fail.png) | ![after](screenshots/success.png) |
 
 ---
 
