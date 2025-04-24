@@ -3,7 +3,7 @@
 /* =========================================================================
    1. Load Shared Components
    -------------------------------------------------------------------------
-   We fetch and inject `sidebar.html` and `footer.html` into the placeholders
+   Fetch and inject `sidebar.html` and `footer.html` into the placeholders
    on every page. This keeps navigation and footer consistent.
    ======================================================================== */
    document.addEventListener('DOMContentLoaded', () => {
