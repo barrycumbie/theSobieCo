@@ -109,4 +109,5 @@ open index.html
 ```
 
 ### Samples
-
+(screenshots/sample1.png)
+(screenshots/sample2.png)
