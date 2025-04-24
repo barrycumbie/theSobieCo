@@ -1,7 +1,7 @@
 # 🐝 Sobie Co. Dev Enhancement —  Layout and Gist
 
 ## 🎯 Summary
-
+**Author:** [LMoats11](https://github.com/LMoats11) 
 This sub-issue enhances the Sobie Co. staging site by improving the user layout experience. I focused on **ease of use and quality of life**, adding:
 
 - 🟩 A sidebar navigation panel
@@ -12,10 +12,11 @@ This sub-issue enhances the Sobie Co. staging site by improving the user layout 
 
 ---
 
+
 ## 🔗 Links
 
 | Item                | Link |
-|---------------------|------|
+|---------------------|------
 | 🐝 Staging Repo     | https://github.com/barrycumbie/theSobieCo |
 | 🤠 My Fork          | https://github.com/LMoats11/theSobieCo |
 | 🌐 VsCode           | https://lmoats11.github.io/theSobieCo/ 
