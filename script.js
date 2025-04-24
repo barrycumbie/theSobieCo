@@ -27,6 +27,22 @@
       })
       .catch(err => console.error('Error loading footer:', err));
   
+ /* search bar */
+   const searchInput = document.getElementById('search-input');
+
+if (searchInput) {
+  searchInput.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    const content = document.querySelectorAll('main, .main, .card');
+
+    content.forEach(section => {
+      const text = section.textContent.toLowerCase();
+      section.style.display = text.includes(query) ? '' : 'none';
+    });
+  });
+}
+
+      
     /* =========================================================================
        2. Countdown Timer
        -------------------------------------------------------------------------

@@ -14,6 +14,32 @@ header {
   padding: 1rem; /* Padding for the header */
   text-align: center; /* Center the text inside the header */
 }
+/*Whats new banner*/
+.whats-new-banner {
+  background-color: #b2dfdb; /* Sea foam green */
+  color: #004d40;            /* Dark teal for contrast */
+  text-align: center;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  font-size: 1.05rem;
+  border-bottom: 2px solid #80cbc4;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* search bar styling*/
+.search-bar {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#search-input {
+  padding: 0.5rem;
+  width: 60%;
+  max-width: 400px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
 
 /* Navigation Styling */
 nav a {
