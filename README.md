@@ -29,7 +29,8 @@ This sub-issue enhances the Sobie Co. staging site by improving the user layout 
 
 | 🔴 BEFORE | 🟩 AFTER |
 |----------|---------|
-| ![before](screenshots/fail.png) | ![after](screenshots/success.png) |
+| ![before](screenshots/fail.png) | 
+![after](screenshots/success.png) |
 
 ---
 
