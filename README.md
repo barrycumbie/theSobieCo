@@ -1,4 +1,4 @@
-# 🐝 Sobie Co. Dev Enhancement — User Context Panel + Layout Updates
+# 🐝 Sobie Co. Dev Enhancement —  Layout and Gist
 
 ## 🎯 Summary
 
@@ -21,7 +21,7 @@ This sub-issue enhances the Sobie Co. staging site by improving the user layout 
 | 🌐 VsCode           | https://lmoats11.github.io/theSobieCo/ 
 | 🐝 Sub-Issue        | https://github.com/barrycumbie/theSobieCo/issues/20 |
 | 🤠 Feature Branch   | `https://github.com/LMoats11/theSobieCo/tree/Sobie_Cowboy` |
-| 📁 Folder/Path      | `/index.html`, `/style.css`, `/script.js`, `/faq.html`, `/register.html`, `/schedule.html`, `/sidebar.html`,    |
+| 📁 Folder/Path      | `/index.html`, `/style.css`, `/script.js`, `/faq.html`, `/register.html`, `/schedule.html`, `/sidebar.html`, `footer.html`, `sources`  |
 
 ---
 
@@ -29,8 +29,7 @@ This sub-issue enhances the Sobie Co. staging site by improving the user layout 
 
 | 🔴 BEFORE | 🟩 AFTER |
 |----------|---------|
-| ![before](screenshots/fail.png) | 
-![after](screenshots/success.png) |
+| <img src="screenshots/fail.png" width="300"/> | <img src="screenshots/success.png" width="300"/> |
 
 ---
 
@@ -48,5 +47,5 @@ This sub-issue enhances the Sobie Co. staging site by improving the user layout 
 ```bash
 git clone https://github.com/LMoats11/theSobieCo
 cd theSobieCo
-git checkout user-context-enhancement
+git checkout Sobie_Cowboy
 open index.html
