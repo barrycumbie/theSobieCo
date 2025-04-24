@@ -109,5 +109,4 @@ open index.html
 ```
 
 ### Samples
-(screenshots/sample1.png)
-(screenshots/sample2.png)
+| ![Sample 1](screenshots/sample1.png) | ![Sample 2](screenshots/sample2.png) |
