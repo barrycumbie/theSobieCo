@@ -1,74 +1,117 @@
+/* General Body Styling */
 body {
-  font-family: Arial, sans-serif;
+  background-color: #D3D3D3; /* Light Grey background */
+  color: #333; /* Dark grey text for contrast */
+  font-family: 'Poppins', sans-serif; /* Applying the Poppins font */
   margin: 0;
-  background: #f4f4f4;
-}
-
-header {
-  background: #004080;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  position: relative;
-}
-
-.search-bar {
-  margin-top: 1rem;
-  padding: 0.5rem;
-  width: 50%;
-  max-width: 400px;
-  border: none;
-  border-radius: 5px;
-}
-
-.banner {
-  background: #ffd700;
-  color: #000;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  font-weight: bold;
-}
-
-.layout {
-  display: flex;
-  min-height: 80vh;
-}
-
-.sidebar {
-  width: 200px;
-  background: #333;
-  padding: 1rem;
-  color: white;
-}
-
-.sidebar ul {
-  list-style-type: none;
   padding: 0;
 }
 
-.sidebar li {
-  margin: 1rem 0;
+/* Header Styling */
+header {
+  background-color: #3CB371; /* Sea Foam Green background */
+  color: #fff; /* White text color */
+  padding: 1rem; /* Padding for the header */
+  text-align: center; /* Center the text inside the header */
 }
 
-.nav-link {
-  color: white;
-  text-decoration: none;
+/* Navigation Styling */
+nav a {
+  margin: 0 10px; /* Spacing between the links */
+  color: #3CB371; /* Sea Foam Green for links */
+  text-decoration: none; /* Removing underline */
 }
 
-.nav-link.active {
-  font-weight: bold;
-  text-decoration: underline;
+nav a:hover {
+  text-decoration: underline; /* Underline effect on hover */
 }
 
-.content {
-  flex: 1;
-  padding: 2rem;
-  background: white;
+/* Container Styling for Central Content */
+.container {
+  max-width: 960px; /* Limit the width of content */
+  margin: auto; /* Center the container */
+  padding: 2rem; /* Padding around the content */
 }
 
-.user-panel {
-  width: 200px;
-  background: #e0e0e0;
-  padding: 1rem;
-  font-size: 0.9rem;
+/* Card Styling */
+.card {
+  background-color: #f5f5f5; /* Light Grey background for cards */
+  padding: 1.5rem; /* Padding inside the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+  margin-bottom: 2rem; /* Spacing between cards */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #2f4f4f; /* Sea Foam Green (dark shade) background */
+  text-align: center; /* Center the footer text */
+  padding: 1rem; /* Padding inside the footer */
+  font-size: 0.9rem; /* Smaller font size */
+  color: #fff; /* White text color */
+}
+
+footer a {
+  color: #9FE2BF; /* Light Sea Foam Green for links in footer */
+  text-decoration: none; /* Removing underline */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background-color: #3CB371; /* Sea Foam Green background */
+  width: 250px; /* Fixed width */
+  position: fixed; /* Fixed position */
+  top: 0;
+  left: 0;
+  height: 100%; /* Full height */
+  padding-top: 20px; /* Padding from the top */
+}
+
+.sidebar h2 {
+  color: #fff; /* White text for the sidebar heading */
+  font-size: 1.5rem; /* Larger font size */
+  text-align: center; /* Centered heading */
+}
+
+.sidebar ul {
+  list-style-type: none; /* Remove default list bullets */
+  padding-left: 0; /* Remove left padding */
+}
+
+.sidebar ul li {
+  margin: 20px 0; /* Spacing between the list items */
+}
+
+.sidebar ul li a {
+  color: #fff; /* White color for links */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.1rem; /* Slightly larger font for links */
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Main Content Area */
+.main {
+  margin-left: 270px; /* Shift content to the right to make room for sidebar */
+  padding: 2rem; /* Padding around the main content */
+}
+
+/* Card Content Inside Main */
+.card h2 {
+  font-size: 1.5rem; /* Larger font for card titles */
+}
+
+.card ul {
+  list-style-type: disc; /* Use disc bullets */
+  padding-left: 20px; /* Add space for the bullets */
+}
+
+.card ul li {
+  margin-bottom: 10px; /* Spacing between list items */
 }

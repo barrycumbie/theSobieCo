@@ -1,36 +1,64 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const currentPage = window.location.pathname.split("/").pop();
-  const links = document.querySelectorAll(".nav-link");
+// script.js
 
-  // Highlight active nav link
-  links.forEach(link => {
-    if (link.getAttribute("href") === currentPage) {
-      link.classList.add("active");
+/* =========================================================================
+   1. Load Shared Components
+   -------------------------------------------------------------------------
+   We fetch and inject `sidebar.html` and `footer.html` into the placeholders
+   on every page. This keeps navigation and footer consistent.
+   ======================================================================== */
+   document.addEventListener('DOMContentLoaded', () => {
+    // Sidebar
+    fetch('sidebar.html')
+      .then(response => response.text())
+      .then(html => {
+        const placeholder = document.getElementById('sidebar-placeholder') 
+                         || document.getElementById('sidebar');
+        if (placeholder) placeholder.innerHTML = html;
+      })
+      .catch(err => console.error('Error loading sidebar:', err));
+  
+    // Footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(html => {
+        const placeholder = document.getElementById('footer-placeholder') 
+                         || document.getElementById('footer');
+        if (placeholder) placeholder.innerHTML = html;
+      })
+      .catch(err => console.error('Error loading footer:', err));
+  
+    /* =========================================================================
+       2. Countdown Timer
+       -------------------------------------------------------------------------
+       Finds an element with id="countdown" and updates it every second with the
+       time remaining until April 9, 2025 00:00:00.
+       ======================================================================== */
+    const countdownEl = document.getElementById('countdown');
+    if (countdownEl) {
+      const targetDate = new Date('April 9, 2026 00:00:00').getTime();
+  
+      function updateCountdown() {
+        const now = Date.now();
+        const distance = targetDate - now;
+  
+        if (distance <= 0) {
+          countdownEl.textContent = 'The conference has started!';
+          clearInterval(timerInterval);
+          return;
+        }
+  
+        const days    = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+        countdownEl.textContent = 
+          `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }
+  
+      // Initial call and then update every second
+      updateCountdown();
+      const timerInterval = setInterval(updateCountdown, 1000);
     }
   });
-
-  // Get or prompt for username
-  let username = localStorage.getItem("sobieUsername");
-
-  if (!username) {
-    username = prompt("Welcome! Please enter your name:");
-    if (username) {
-      localStorage.setItem("sobieUsername", username);
-    } else {
-      username = "Guest";
-    }
-  }
-
-  // Display username in user panel
-  const userNameSpans = document.querySelectorAll(".user-name");
-  userNameSpans.forEach(span => {
-    span.textContent = username;
-  });
-
-  // Optional greeting on account page
-  if (currentPage === "account.html") {
-    alert(`👋 Welcome back, ${username}!`);
-  }
-
-  console.log("SOBIE site JS active on:", currentPage);
-});
+  
