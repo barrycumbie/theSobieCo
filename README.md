@@ -98,6 +98,7 @@ This sub-issue enhances the Sobie Co. staging site by improving the user layout 
   ```js
   Error loading sidebar: ...
   Error loading footer: ...
+ ---
 
 ### ✅ Local Dev
 ```bash
@@ -105,3 +106,7 @@ git clone https://github.com/LMoats11/theSobieCo
 cd theSobieCo
 git checkout Sobie_Cowboy
 open index.html
+```
+
+### Samples
+
