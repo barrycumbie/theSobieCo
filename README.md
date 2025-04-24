@@ -18,9 +18,9 @@ This sub-issue enhances the Sobie Co. staging site by improving the user layout 
 |---------------------|------|
 | 🐝 Staging Repo     | https://github.com/barrycumbie/theSobieCo |
 | 🤠 My Fork          | https://github.com/LMoats11/theSobieCo |
-| 🌐 VsCode                                                    |
+| 🌐 VsCode           
 | 🐝 Sub-Issue        | https://github.com/barrycumbie/theSobieCo/issues/XX |
-| 🤠 Feature Branch   | `u` |
+| 🤠 Feature Branch   | `https://github.com/LMoats11/theSobieCo/tree/Sobie_Cowboy` |
 | 📁 Folder/Path      | `/index.html`, `/styles/style.css`, `/scripts/script.js` |
 
 ---
