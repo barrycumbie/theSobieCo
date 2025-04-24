@@ -1,0 +1,33 @@
+// Get the countdown display element
+const countdownEl = document.getElementById('countdown');
+
+// Set the event date/time
+const eventDate = new Date("April 9, 2026 00:00:00").getTime();
+
+// Update the countdown every second
+setInterval(() => {
+  const now = new Date().getTime();               // Get current time
+  const timeLeft = eventDate - now;               // Time remaining
+
+  if (timeLeft < 0) {
+    // If the event has passed
+    countdownEl.textContent = "The conference has started!";
+  } else {
+    // Calculate remaining days and display
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    countdownEl.textContent = `${days} days remaining`;
+  }
+}, 1000);
+
+// Listen for input in the search bar
+document.getElementById('search-input').addEventListener('input', function () {
+  const q = this.value.toLowerCase(); // Get the lowercase search query
+
+  // Loop through all content sections (e.g., cards)
+  document.querySelectorAll('.card').forEach(card => {
+    const text = card.textContent.toLowerCase(); // Card content as text
+
+    // Show or hide the card based on whether it includes the search query
+    card.style.display = text.includes(q) ? '' : 'none';
+  });
+});
