@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
     res.render('projects', { pageTitle: 'Home Page'});
 });
 
-/* 🎓 brittneydaniel 4.26.2025 iss #24 LAYOUT/CONTENT*/
+// 🎓 brittneydaniel 4.26.2025 iss #24 LAYOUT#5
 router.get('/about', function(req, res, next) {
     res.render('bdaniel', {pageTitle: 'About Page'});
 });
