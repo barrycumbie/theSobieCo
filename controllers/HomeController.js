@@ -4,9 +4,9 @@ const mongoClient = require("../services/MongoClientService");
 const APIResponse = require("../DTOs/APIResponse");
 
 router.use(function(req, res, next) { next() });
-//testing to see if my about me page works
+
 router.get('/', function(req, res, next) {
-    res.render('projects', { pageTitle: 'Home Page'});
+    res.render('allisonl_home', { pageTitle: 'Home Page'});
 });
 
 // 🎓 brittneydaniel 4.26.2025 iss #24 LAYOUT#5
