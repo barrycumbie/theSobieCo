@@ -6,7 +6,7 @@ const APIResponse = require("../DTOs/APIResponse");
 router.use(function(req, res, next) { next() });
 
 router.get('/', function(req, res, next) {
-    res.render('index', { pageTitle: 'SIBIE'});
+    res.render('index', { pageTitle: 'SOBIE'});
 });
 
 router.get('/home', function(req, res, next) {
