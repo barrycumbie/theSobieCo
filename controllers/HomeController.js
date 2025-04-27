@@ -6,11 +6,12 @@ const APIResponse = require("../DTOs/APIResponse");
 router.use(function(req, res, next) { next() });
 //testing to see if my about me page works
 router.get('/', function(req, res, next) {
-    res.render('bdaniel', { pageTitle: 'SOBIE About Page'});
+    res.render('projects', { pageTitle: 'Home Page'});
 });
 
-router.get('/home', function(req, res, next) {
-    res.render('home');
+/* 🎓 brittneydaniel 4.26.2025 iss #24 LAYOUT/CONTENT*/
+router.get('/about', function(req, res, next) {
+    res.render('bdaniel', {pageTitle: 'About Page'});
 });
 
 router.get('/home/latestConferenceInfo', async function(req, res, next) {
