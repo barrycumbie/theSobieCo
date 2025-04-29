@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/', require('./controllers/HomeController'));
 app.use('/register', require('./controllers/RegisterController'));
+app.use('/login', require('./controllers/app-logincontroller'));
 
 const server = app.listen(3000, function() {
   const host = server.address().address;
