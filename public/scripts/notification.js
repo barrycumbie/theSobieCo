@@ -1,3 +1,4 @@
+//Beth Ann Tucker
 // Notification data is now stored in an array
 const notifications = [
     {
