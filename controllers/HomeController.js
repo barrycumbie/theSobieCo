@@ -6,21 +6,35 @@ const APIResponse = require("../DTOs/APIResponse");
 router.use(function(req, res, next) { next() });
 
 router.get('/', function(req, res, next) {
-    res.render('garrett-index', { pageTitle: 'SIBIE'});
+    res.render('index', { pageTitle: 'SOBIE'});
 });
 
+//🪣@lukehester 4.25.2025 iss #4
+//We added this endpoint to access our homepage
+router.get('/', function(req, res, next) {
+    res.render('garrett-index', { pageTitle: 'SOBIE'});
+});
+
+//🪣@lukehester 4.25.2025 iss #4
+//We added this endpoint to access our registration page
 router.get('/register', (req, res) => {
     res.render('lukeh-registration');
 });
 
+//🪣@lukehester 4.25.2025 iss #4
+//We added this endpoint to access our homepage by clicking the SOBIE Logo
 router.get('/homepage', (req, res) => {
     res.render('garrett-index');
 });
 
+//🪣@lukehester 4.25.2025 iss #4
+//We added this endpoint to access our login page
 router.get('/login', (req, res) => {
     res.render('login-lukeh');
 });
 
+//🪣@lukehester 4.25.2025 iss #4
+//We added this endpoint to access our "create new account" page
 router.get('/createaccount', (req, res) => {
     res.render('create-account-lukeh');
 });
