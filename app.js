@@ -90,4 +90,8 @@ const server = app.listen(process.env.PORT || 3000, function() {
   const port = server.address().port;
 
   console.log("Server is running on http://%s:%s", host, port);
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 6b1b4f4 (fix conflict)
