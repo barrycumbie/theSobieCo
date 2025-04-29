@@ -1,12 +1,28 @@
 const express = require('express');
 const router = express.Router();
-const mongoClient = require("../services/MongoClientService");
+// const mongoClient = require("../services/MongoClientService");
 const APIResponse = require("../DTOs/APIResponse");
 
 router.use(function(req, res, next) { next() });
 
 router.get('/', function(req, res, next) {
-    res.render('index', { pageTitle: 'SIBIE'});
+    res.render('garrett-index', { pageTitle: 'SIBIE'});
+});
+
+router.get('/register', (req, res) => {
+    res.render('lukeh-registration');
+});
+
+router.get('/homepage', (req, res) => {
+    res.render('garrett-index');
+});
+
+router.get('/login', (req, res) => {
+    res.render('login-lukeh');
+});
+
+router.get('/createaccount', (req, res) => {
+    res.render('create-account-lukeh');
 });
 
 router.get('/home', function(req, res, next) {

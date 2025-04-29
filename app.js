@@ -7,6 +7,7 @@ const app = express();
 app.use('/documents', express.static(__dirname + '/public/documents'));
 app.use('/scripts', express.static(__dirname + '/public/scripts'));
 app.use('/styles', express.static(__dirname + '/public/styles'));
+app.use(express.static(__dirname + '/public'));
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
