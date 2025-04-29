@@ -49,7 +49,64 @@
 				</a>
 			</li>
 
-			<!-- proceedings page link -->
+
+<!-- Mason Schrader -->
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+	<!-- Beta ribbon -->
+	<span class="absolute top-0 right-0 transform rotate-12 bg-yellow-300 text-xs font-bold px-2 py-1">
+	  BETA
+	</span>
+  
+	<div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+	  <!-- Logo -->
+	  <a href="/" class="text-xl font-bold tracking-widest px-4 py-2 border rounded-full">
+		S·O·B·I·E
+	  </a>
+	  <span class="italic text-sm hidden sm:inline">The Society of Business, Industry, & Economics</span>
+  
+	  <!-- Hamburger -->
+	  <button id="menu-btn" class="sm:hidden text-gray-700 focus:outline-none">
+		<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+			 viewBox="0 0 24 24">
+		  <path stroke-linecap="round" stroke-linejoin="round"
+				d="M4 6h16M4 12h16M4 18h16" />
+		</svg>
+	  </button>
+	</div>
+  
+	<!-- Menu (hidden on mobile) -->
+	<div id="mobile-menu" class="sm:hidden hidden px-4 pb-4">
+	  <ul class="flex flex-col space-y-2 text-center">
+		<li><a href="docs/resources/sobie-2022-proceedings-guidelines.pdf" target="_blank" class="hover:text-blue-700">Proceeding Guidelines</a></li>
+		<li><a href="docs/resources/sobie-2024-call-for-papers.pdf" target="_blank" class="hover:text-blue-700">Call for Papers 2024</a></li>
+		<li><a href="/programs" class="hover:text-blue-700">Programs</a></li>
+		<li><a href="/proceedings" class="hover:text-blue-700">Proceedings</a></li>
+		<li><a href="/admin" class="hover:text-blue-700">Admin Portal</a></li>
+	  </ul>
+	</div>
+  
+	<!-- Desktop Menu -->
+	<div class="hidden sm:flex justify-center py-2">
+	  <ul class="flex space-x-6 text-sm">
+		<li><a href="docs/resources/sobie-2022-proceedings-guidelines.pdf" target="_blank" class="hover:text-blue-700">Proceeding Guidelines</a></li>
+		<li><a href="docs/resources/sobie-2024-call-for-papers.pdf" target="_blank" class="hover:text-blue-700">Call for Papers 2024</a></li>
+		<li><a href="/programs" class="hover:text-blue-700">Programs</a></li>
+		<li><a href="/proceedings" class="hover:text-blue-700">Proceedings</a></li>
+		<li><a href="/admin" class="hover:text-blue-700">Admin Portal</a></li>
+	  </ul>
+	</div>
+  </nav>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+<!-- proceedings page link -->
 			<li class="nav-item text-center">
 				<a class="nav-link text-dark" href="/proceedings" role="button">
 					<button id="navBtn" style="border: none; background-color: transparent;">Proceedings</button>
@@ -63,5 +120,15 @@
 		</ul>
 
 	</div>
+			<!-- 🐝@OmarVCRZ 4.25.2025 iss#1 -->
+			<!-- Login page link -->
+			<li class="nav-item text-center">
+				<a class="nav-link text-dark" href="/login" role="button">
+					<button id="navBtn" style="border: none; background-color: transparent;">Login</button>
+				</a>
+			</li>
+        </ul>
+     
+  </div> 
 	<!-- end collabsible section -->
 </nav>
