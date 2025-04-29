@@ -1,59 +1,64 @@
-<!-- @nrobinson4 4.29.2025 iss#1 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manage Registrations | Admin Panel</title>
+  <title>Dashboard | Sobie Co</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/styleNolen.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <%- include('partials/sobie-nav') %>
-  <!-- Already shown in ./sobieAdmin/admin.ejs -->
+<!-- Page users see after logging in, shows all necessary info based on permission -->
+  <%- include('partials/navbar') %>
+  
   <div class="container mt-4">
-    <h1 class="mb-4">Manage Registrations</h1>
+    <h1 class="mb-4">Dashboard</h1>
     
     <%- include('partials/messages') %>
-    <!-- Shows the event registrations and the people associated with them via database -->
+    <div class="card mb-4">
+      <div class="card-header">
+        Welcome, <%= user.username %>!
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Your Information</h5>
+        <p class="card-text">Email: <%= user.email %></p>
+        <p class="card-text">Account type: <%= user.isAdmin ? 'Administrator' : 'Regular user' %></p>
+        <a href="/profile" class="btn btn-primary">Edit Profile</a>
+        <!-- Button to admin portal shows up if user is admin -->
+        <% if(user.isAdmin) { %>
+          <a href="/admin" class="btn btn-warning">Admin Panel</a>
+        <% } %>
+      </div>
+    </div>
+
+    <!-- Shows the user's registrations under info card -->
+    <h2>Your Registrations</h2>
     <% if(registrations && registrations.length > 0) { %>
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>User</th>
               <th>Event Name</th>
               <th>Event Date</th>
               <th>Registration Date</th>
-              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             <% registrations.forEach(reg => { %>
               <tr>
-                <td><%= reg.id %></td>
-                <td><%= reg.username %></td>
                 <td><%= reg.eventName %></td>
                 <td><%= reg.eventDate %></td>
                 <td><%= new Date(reg.registrationDate).toLocaleString() %></td>
-                <td>
-                  <form action="/admin/registrations/delete/<%= reg.id %>" method="POST" class="d-inline">
-                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this registration?')">Delete</button>
-                  </form>
-                </td>
               </tr>
             <% }) %>
           </tbody>
         </table>
       </div>
     <% } else { %>
-      <p>No registrations found.</p>
+      <p>You have no registrations yet.</p>
     <% } %>
-    
-    <a href="/admin" class="btn btn-secondary mt-3">Back to Admin Panel</a>
   </div>
 
-  <%- include('partials/sobie-footer') %>
+  <%- include('partials/footer') %>
 </body>
 </html>
