@@ -48,23 +48,23 @@ app.use(function (req, res, next) {
 });
 
 // 🪣@OmarVCRZ 4.25.2025 iss#1 (Session Setup)
-app.use(session({
-  secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: false
-}));
+// app.use(session({
+//   secret: process.env.SESSION_SECRET,
+//   resave: false,
+//   saveUninitialized: false
+// }));
 
 // 🪣@OmarVCRZ 4.25.2025 iss#1 (CSRF Protection)
-app.use(csurf());
-app.use((req, res, next) => {
-  res.locals.csrfToken = req.csrfToken();
-  next();
-});
+// app.use(csurf());
+// app.use((req, res, next) => {
+//   res.locals.csrfToken = req.csrfToken();
+//   next();
+// });
 
 // 🐝@OmarVCRZ 4.25.2025 iss#1 (MongoDB Connection)
-mongoose.connect(process.env.MONGO_URI_OMAR)
-     .then(() => console.log("MongoDB Connected!"))
-     .catch(err => console.error("MongoDB Connection Failure:", err));
+// mongoose.connect(process.env.MONGO_URI_OMAR)
+//      .then(() => console.log("MongoDB Connected!"))
+//      .catch(err => console.error("MongoDB Connection Failure:", err));
 
 // // 🪣@OmarVCRZ 4.25.2025 iss#1 (MongoDB Connection)
 // const uri = process.env.MONGO_URI_OMAR;
@@ -85,8 +85,8 @@ mongoose.connect(process.env.MONGO_URI_OMAR)
 app.use('/', require('./controllers/HomeController'));
 app.use('/register', require('./controllers/RegisterController'));
 // 🪣@OmarVCRZ 4.25.2025 iss#1 (attaches the routes to the server)
-app.use('/', require('./controllers/AuthController'));
-
+// app.use('/auth', require('./controllers/AuthController'));
+app.use('/subscribe', require('./controllers/subscribeController'));
 // 🎓 brittneydaniel 4.26.2025 iss #24 LAYOUT#5
 //Adding functionality to run in render
 const server = app.listen(process.env.PORT || 3000, function() {
