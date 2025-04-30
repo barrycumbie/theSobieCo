@@ -84,10 +84,15 @@ app.use(function (req, res, next) {
 // 🪣@OmarVCRZ 4.25.2025 iss#1 (Load Routes AFTER session + csrf middleware) 
 app.use('/', require('./controllers/HomeController'));
 app.use('/register', require('./controllers/RegisterController'));
+app.use('/login', require('./controllers/app-logincontroller'));
+
 // 🪣@OmarVCRZ 4.25.2025 iss#1 (attaches the routes to the server)
 // app.use('/auth', require('./controllers/AuthController'));
+
 app.use('/subscribe', require('./controllers/subscribeController'));
+
 // 🎓 brittneydaniel 4.26.2025 iss #24 LAYOUT#5
+
 //Adding functionality to run in render
 const server = app.listen(process.env.PORT || 3000, function() {
   const host = server.address().address;

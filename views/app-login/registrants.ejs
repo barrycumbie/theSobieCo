@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="app-login_style.css">
+  <meta charset="UTF-8">
+  <title> Registrants Page (Admin Exclusive) </title>
+</head>
+<body>
+  <main>
+    <h1> Registrants Page (Admin Exclusive) </h1>
+    <br>
+    <br>
+    <h2> Registrant List </h2>
+
+<form method="POST" action="insert/"> 
+  <input name="Registrant_Name"> 
+  <input name="Registrant_Status"> 
+  <button class="btn btn-primary" role="submit">New Registrant</button>
+</form>
+
+    <% profileData.forEach(result=> { %>
+      <div class="col-md-8">
+
+
+        <form method="POST" action="update/">
+          <input name="updateRegistrant_Name" value="<%= result.Registrant_Name %>">
+          <input name="updateRegistrant_Status" value="<%= result.Registrant_Status %>">
+          <input type="hidden" name="updateId" value="<%= result._id %>">
+          <button class="btn btn-primary" role="submit"><i class="bi bi-pencil"></i>Update Registrant</button>
+        </form>
+
+
+
+        <form method="POST" action="delete/">
+          <input type="hidden" name="deleteId" value="<%=result._id %>">
+          <button class="btn btn-primary" role="submit"><i class="bi bi-trash3"></i>Delete Registrant</button>
+        </form>
+      </div>
+      <% }); %>
+
+        <a href="/app-login/admin" style="color:white">Return to Admin Page</a>
+  </main>
+</body>
+
+</html>
