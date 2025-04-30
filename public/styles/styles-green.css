@@ -1,0 +1,144 @@
+/* General Body Styling */
+body {
+    background-color: #D3D3D3; /* Light Grey background */
+    color: #333; /* Dark grey text for contrast */
+    font-family: 'Poppins', sans-serif; /* Applying the Poppins font */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: #3CB371; /* Sea Foam Green background */
+    color: #fff; /* White text color */
+    padding: 1rem; /* Padding for the header */
+    text-align: center; /* Center the text inside the header */
+  }
+  /*Whats new banner*/
+  .whats-new-banner {
+    background-color: #b2dfdb; /* Sea foam green */
+    color: #004d40;            /* Dark teal for contrast */
+    text-align: center;
+    padding: 0.75rem 1.25rem;
+    font-weight: 500;
+    font-size: 1.05rem;
+    border-bottom: 2px solid #80cbc4;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  /* search bar styling*/
+  .search-bar {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  #search-input {
+    padding: 0.5rem;
+    width: 60%;
+    max-width: 400px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  
+  /* Navigation Styling */
+  nav a {
+    margin: 0 10px; /* Spacing between the links */
+    color: #3CB371; /* Sea Foam Green for links */
+    text-decoration: none; /* Removing underline */
+  }
+  
+  nav a:hover {
+    text-decoration: underline; /* Underline effect on hover */
+  }
+  
+  /* Container Styling for Central Content */
+  .container {
+    max-width: 960px; /* Limit the width of content */
+    margin: auto; /* Center the container */
+    padding: 2rem; /* Padding around the content */
+  }
+  
+  /* Card Styling */
+  .card {
+    background-color: #f5f5f5; /* Light Grey background for cards */
+    padding: 1.5rem; /* Padding inside the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+    margin-bottom: 2rem; /* Spacing between cards */
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #2f4f4f; /* Sea Foam Green (dark shade) background */
+    text-align: center; /* Center the footer text */
+    padding: 1rem; /* Padding inside the footer */
+    font-size: 0.9rem; /* Smaller font size */
+    color: #fff; /* White text color */
+  }
+  
+  footer a {
+    color: #9FE2BF; /* Light Sea Foam Green for links in footer */
+    text-decoration: none; /* Removing underline */
+  }
+  
+  footer a:hover {
+    text-decoration: underline; /* Underline effect on hover */
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    background-color: #3CB371; /* Sea Foam Green background */
+    width: 250px; /* Fixed width */
+    position: fixed; /* Fixed position */
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height */
+    padding-top: 20px; /* Padding from the top */
+  }
+  
+  .sidebar h2 {
+    color: #fff; /* White text for the sidebar heading */
+    font-size: 1.5rem; /* Larger font size */
+    text-align: center; /* Centered heading */
+  }
+  
+  .sidebar ul {
+    list-style-type: none; /* Remove default list bullets */
+    padding-left: 0; /* Remove left padding */
+  }
+  
+  .sidebar ul li {
+    margin: 20px 0; /* Spacing between the list items */
+  }
+  
+  .sidebar ul li a {
+    color: #fff; /* White color for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.1rem; /* Slightly larger font for links */
+  }
+  
+  .sidebar ul li a:hover {
+    text-decoration: underline; /* Underline effect on hover */
+  }
+  
+  /* Main Content Area */
+  .main {
+    margin-left: 270px; /* Shift content to the right to make room for sidebar */
+    padding: 2rem; /* Padding around the main content */
+  }
+  
+  /* Card Content Inside Main */
+  .card h2 {
+    font-size: 1.5rem; /* Larger font for card titles */
+  }
+  
+  .card ul {
+    list-style-type: disc; /* Use disc bullets */
+    padding-left: 20px; /* Add space for the bullets */
+  }
+  
+  .card ul li {
+    margin-bottom: 10px; /* Spacing between list items */
+  }
+  
