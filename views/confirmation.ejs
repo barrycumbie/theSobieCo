@@ -1,0 +1,84 @@
+
+<!-- 🌵 Nevaeh & Marvin 4.30.2025 iss#26 LAYOUT#2- -->
+
+
+<%- include('partials/sobie-start') %>
+<%- include('partials/sobie-nav') %>
+
+<!-- Leaflet CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet/dist/leaflet.css"
+/>
+<link rel="stylesheet" href="/styles/confirm.css" />
+
+
+<div class="container py-5 mt-5">
+  <h1>Registration Confirmation</h1>
+  <p>Thank you for registering! Here’s what you submitted:</p>
+
+  <table class="table table-bordered">
+    <tbody>
+      <!-- Contact Information -->
+      <tr><th>First Name</th>                <td><%= formData.firstName %></td></tr>
+      <tr><th>Last Name</th>                 <td><%= formData.lastName %></td></tr>
+      <tr><th>Email</th>                     <td><%= formData.email %></td></tr>
+      <tr><th>Mobile</th>                    <td><%= formData.mobile %></td></tr>
+      <tr><th>I am a student?</th>           <td><%= formData.isStudent ? 'Yes' : 'No' %></td></tr>
+
+      <% if (formData.isStudent) { %>
+        <tr><th>Affiliation</th>            <td><%= formData.academicAffiliation %></td></tr>
+        <tr><th>Area of Study</th>          <td><%= formData.areaOfStudy %></td></tr>
+        <tr>
+          <th>Classification</th>
+          <td>
+            <%= formData.classification %>
+            <% if (formData.classification === 'Other') { %>
+              – <%= formData.otherSpecification %>
+            <% } %>
+          </td>
+        </tr>
+      <% } else { %>
+        <tr><th>Organization/Company</th>    <td><%= formData.affliation %></td></tr>
+        <tr><th>Role/Title</th>             <td><%= formData.role %></td></tr>
+      <% } %>
+
+      <!-- Research Portion -->
+      <tr><th>I plan to submit research?</th><td><%= formData.hasResearch ? 'Yes' : 'No' %></td></tr>
+      <% if (formData.hasResearch) { %>
+        <tr><th>Research ready to submit?</th>    <td><%= formData.canSubResearch ? 'Yes' : 'No' %></td></tr>
+        <tr><th>Submission Type</th>              <td><%= formData.submissionType %></td></tr>
+        <tr><th>I have co-author(s)?</th>          <td><%= formData.hasCoAuthor ? 'Yes' : 'No' %></td></tr>
+        <% if (formData.hasCoAuthor) { %>
+          <tr><th>Co-Author Names</th>            <td><%= formData.coAuthor %></td></tr>
+          <tr><th>Co-author is a student?</th>    <td><%= formData.isCoAuthorStudent ? 'Yes' : 'No' %></td></tr>
+          <tr><th>Preferred Session</th>          <td><%= formData.sessionPref %></td></tr>
+        <% } %>
+        <tr><th>Research Title</th>               <td><%= formData.researchTitle %></td></tr>
+        <tr><th>Primary Area of Research</th>     <td><%= formData.researchArea %></td></tr>
+        <tr><th>Research Abstract</th>            <td><%= formData.researchAbstract %></td></tr>
+        <tr><th>Include in Proceedings?</th>      <td><%= formData.inProceedings ? 'Yes' : 'No' %></td></tr>
+      <% } %>
+
+      <!-- Map Row -->
+      <tr>
+        <th>Conference Location</th>
+        <td>
+          <div id="map"></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<%- include('partials/sobie-footer') %>
+<%- include('partials/sobie-end') %>
+
+<script>
+  // Hard-coded conference coordinates
+  window.CONF_LOCATION = { lat: 29.6436, lng: -82.3549 };
+</script>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- Map initializer -->
+<script src="/scripts/confirmation.js"></script>

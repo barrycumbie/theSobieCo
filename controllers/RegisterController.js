@@ -1,3 +1,5 @@
+
+
 const express = require('express');
 const router = express.Router();
 const mongoClient = require("../services/MongoClientService");
@@ -42,5 +44,9 @@ router.post('/', async (req, res, next) => {
         res.status(500).json(response);
     }
 });
+// 🌵 Nevaeh & Marvin 4.30.2025 iss#26 LAYOUT#2 
+router.get('/', (req, res) => {
+    res.render('sobie-register', { pageTitle: 'SOBIE Registration' });
+  });
 
 module.exports = router;

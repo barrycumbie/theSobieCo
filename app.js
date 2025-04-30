@@ -1,4 +1,4 @@
-// 🪣@OmarVCRZ 4.25.2025 iss#1
+/*// 🪣@OmarVCRZ 4.25.2025 iss#1
 require('dotenv').config(); // .env loading
 
 const express = require('express');
@@ -90,4 +90,52 @@ const server = app.listen(process.env.PORT || 3000, function() {
   const port = server.address().port;
 
   console.log("Server is running on http://%s:%s", host, port);
+});
+*/
+
+// 🌵 Nevaeh & Marvin 4.30.2025 iss#26 LAYOUT#2
+require('dotenv').config();
+
+const express = require('express');
+const path = require('path');
+
+const homeController = require('./controllers/HomeController');
+const registerController = require('./controllers/RegisterController');
+const registerRouter = require('./routes/register');
+
+const app = express();
+
+// Serve static assets clearly
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/documents', express.static(path.join(__dirname, 'public/documents')));
+app.use('/scripts', express.static(path.join(__dirname, 'public/scripts')));
+app.use('/styles', express.static(path.join(__dirname, 'public/styles')));
+
+// CORS setup
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  next();
+});
+
+// View engine setup (EJS)
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+// Body parsing
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Routing clearly defined:
+app.use('/', homeController);   
+
+//Commented out this beacuse confirm would not load.
+//app.use('/register', registerController);          
+app.use('/', registerRouter);               
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
