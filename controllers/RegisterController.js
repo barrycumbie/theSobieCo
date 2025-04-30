@@ -8,7 +8,7 @@ const { sendEmail } = require("../services/MailerService");
 
 router.use(function(req, res, next) { next() });
 
-router.get('/', async (req, res) => {
+router.get('/sobie-form', async (req, res) => {
     res.render('sobie-form', { pageTitle: 'SOBIE - Register' })
 });
 
@@ -45,7 +45,7 @@ router.post('/', async (req, res, next) => {
     }
 });
 // 🌵 Nevaeh & Marvin 4.30.2025 iss#26 LAYOUT#2 
-router.get('/', (req, res) => {
+router.get('/sobie-register', (req, res) => {
     res.render('sobie-register', { pageTitle: 'SOBIE Registration' });
   });
 
