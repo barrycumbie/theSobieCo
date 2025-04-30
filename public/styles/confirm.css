@@ -1,0 +1,10 @@
+/* 🌵 Nevaeh & Marvin 4.30.2025 iss#26 LAYOUT#2 */
+
+#map {
+    height: 500px;      
+    width: 100%;         
+    min-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
