@@ -1,0 +1,50 @@
+/* Example of a fixed CSS version of your styles */
+
+/* Feedback colors */
+.valid-feedback {
+    color: #28a745;
+  }
+  
+  .invalid-feedback {
+    color: #dc3545;
+  }
+  
+  /* Form input states */
+  .form-control.is-valid {
+    border-color: #28a745;
+  }
+  
+  .form-control.is-invalid {
+    border-color: #dc3545;
+  }
+  .logo {
+    width: 100px !important;
+    height: auto !important;
+  }
+  .center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+  }
+  .confirm {
+    width: 100px !important;
+    height: auto !important;
+  }
+  .headline {
+    color: DarkBlue;
+  }
+  body {
+      background-color: Linen;
+  }
+  #formSubmit {
+    background-color: #003366; 
+    color: white; 
+    width: 100%; 
+    padding: 15px; 
+    border: none; 
+    font-size: 16px; 
+  }
+  #formSubmit:hover {
+    background-color: #002244;
+  }

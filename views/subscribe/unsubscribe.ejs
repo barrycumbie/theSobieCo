@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!-- 📰 @AnnaShannon2002 @mtrejo03 4.29.2025 iss #3 -->
+
+<html lang="en">
+
+<head>
+  <title>Unsubscribe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/subscribe.css">
+</head>
+
+<div class="container">
+<div>
+<body>
+  <img src="/img/sobie.png" alt="sobie logo" class="logo">
+  <h1 class="headline"> You are now successfully unsubscribed</h1>
+  <p>We have removed your email address from our list.</p>
+  <p>Please take a moment to tell us why you no longer wish to hear from us: </p>
+</div>
+<div>
+  <form>
+    <input type="radio" id="html" name="reason" value="HTML">
+    <label for="html">I no longer want to receive these emails</label><br>
+    <input type="radio" id="css" name="reason" value="CSS">
+    <label for="css">I don't think the content is relevant</label><br>
+    <input type="radio" id="javascript" name="reason" value="JavaScript">
+    <label for="javascript"> I receive too many emails from SOBIE</label><br>
+    <input type="radio" id="java" name="reason" value="JAVA">
+    <label for="java">Other (please explain below):</label><br>
+    <textarea class="form-control" id="usertext" rows="6"></textarea>
+  </form>
+</div>
+  <div class="btn-container"><br>
+    <!--<input type="submit" value="Submit">-->
+    <button type ="submit" class="btn btn-primary" id="formSubmit">Submit</button>
+  </div>
+</div>
+</body>
+</html>

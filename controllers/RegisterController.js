@@ -1,3 +1,5 @@
+
+
 const express = require('express');
 const router = express.Router();
 const mongoClient = require("../services/MongoClientService");
@@ -6,7 +8,7 @@ const { sendEmail } = require("../services/MailerService");
 
 router.use(function(req, res, next) { next() });
 
-router.get('/', async (req, res) => {
+router.get('/sobie-form', async (req, res) => {
     res.render('sobie-form', { pageTitle: 'SOBIE - Register' })
 });
 
@@ -42,5 +44,9 @@ router.post('/', async (req, res, next) => {
         res.status(500).json(response);
     }
 });
+// 🌵 Nevaeh & Marvin 4.30.2025 iss#26 LAYOUT#2 
+router.get('/sobie-register', (req, res) => {
+    res.render('sobie-register', { pageTitle: 'SOBIE Registration' });
+  });
 
 module.exports = router;
