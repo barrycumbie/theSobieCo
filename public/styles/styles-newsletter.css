@@ -1,0 +1,59 @@
+body{
+  background-color:#d6d6c2;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.container-fluid{
+  color:blue;
+}
+
+.container{
+  margin-top:150px;
+  background-color:white;
+  border:2px solid whitesmoke;
+  border-radius:5px;
+  padding-bottom:50px;
+}
+
+.h1{
+  background-color: blue;
+  margin-top:0px;
+  padding:20px;
+  text-align:center;
+}
+
+.text{
+  margin-top:30px;
+  text-align:center;
+  font-size:1.3em;
+  padding-right:5px;
+  padding-left:5px;
+}
+
+.mail{
+  position:relative;
+  right:-15%;
+  width:70%;
+  box-shadow:0px 5px 5px #888;
+}
+
+.btn{
+  color:white;
+  margin-top:20px;
+  position:relative;
+  right:-20%;
+  width:60%;
+  background-color:cornflowerblue;
+  border:cornflowerblue;
+  box-shadow:0px 5px 0px cornflowerblue;
+}
+
+h3{
+  color:blue;
+  text-align:center;
+}
+
+.finalText{
+  font-size:36px;
+  text-align:center;
+}
