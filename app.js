@@ -1,4 +1,4 @@
-/*// 🪣@OmarVCRZ 4.25.2025 iss#1
+// 🪣@OmarVCRZ 4.25.2025 iss#1
 require('dotenv').config(); // .env loading
 
 const express = require('express');
@@ -12,7 +12,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 
 // // 🪣@OmarVCRZ 4.25.2025 iss#1
-// const { MongoClient } = require('mongodb')
+const { MongoClient } = require('mongodb')
 
 // 🪣@OmarVCRZ 4.25.2025 iss#1
 const HomeController = require('./controllers/HomeController');
@@ -44,44 +44,35 @@ app.use(function (req, res, next) {
 });
 
 // 🪣@OmarVCRZ 4.25.2025 iss#1 (Session Setup)
-// app.use(session({
-//   secret: process.env.SESSION_SECRET,
-//   resave: false,
-//   saveUninitialized: false
-// }));
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false
+}));
 
-// <<<<<<< iss46-janet
-// // // 🪣@OmarVCRZ 4.25.2025 iss#1 (CSRF Protection)
-// =======
-// // 🪣@OmarVCRZ 4.25.2025 iss#1 (CSRF Protection)
-// >>>>>>> main
-// app.use(csurf());
-// app.use((req, res, next) => {
-//   res.locals.csrfToken = req.csrfToken();
-//   next();
-// });
+app.use(csurf());
+app.use((req, res, next) => {
+  res.locals.csrfToken = req.csrfToken();
+  next();
+});
 
-// <<<<<<< iss46-janet
-// // // 🐝@OmarVCRZ 4.25.2025 iss#1 (MongoDB Connection)
-// =======
 // // 🐝@OmarVCRZ 4.25.2025 iss#1 (MongoDB Connection)
-// >>>>>>> main
-// mongoose.connect(process.env.MONGO_URI_OMAR)
-//      .then(() => console.log("MongoDB Connected!"))
-//      .catch(err => console.error("MongoDB Connection Failure:", err));
+mongoose.connect(process.env.MONGO_URI_OMAR)
+     .then(() => console.log("MongoDB Connected!"))
+     .catch(err => console.error("MongoDB Connection Failure:", err));
 
 // // 🪣@OmarVCRZ 4.25.2025 iss#1 (MongoDB Connection)
-// const uri = process.env.MONGO_URI_OMAR;
-// const client = new MongoClient(uri);
+const uri = process.env.MONGO_URI_OMAR;
+const client = new MongoClient(uri);
 
-// async function connectDB() {
-//   try {
-//     await client.connect();
-//     console.log("MongoDB Connected");
-//   } catch (err) {
-//     console.error("MongoDB Connection Failure:", err);
-//   }
-// }
+async function connectDB() {
+  try {
+    await client.connect();
+    console.log("MongoDB Connected");
+  } catch (err) {
+    console.error("MongoDB Connection Failure:", err);
+  }
+}
 
 // connectDB();
 
